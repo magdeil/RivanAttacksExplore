@@ -600,7 +600,7 @@ auto reply: Auto Reply – Ticket Received
 * On the customer side panel, click the ticket and verify that the response is received
 * The customer should see a message stating that the ticket is undergoing initial analysis and triage
 
-<!-- Screenshot: Customer side showing Template 1 response received -->
+![Customer side showing Template 1 response received](https://app.devin.ai/attachments/5118b22a-95f2-4960-ae73-14443b3ebc8c/01-customer-template1.png)
 
 
 # Step 10: Escalating Ticket from L1 to L2 – Incident Responder
@@ -610,7 +610,7 @@ auto reply: Auto Reply – Ticket Received
 * On the Admin/Agent Panel (Index), open the ticket that was handled by L1
 * Click the ticket to view its details
 
-<!-- Screenshot: Opening the ticket from L1 queue -->
+![Opening the ticket from L1 queue](https://app.devin.ai/attachments/33627114-8db2-437a-8987-932797854946/02-agent-ticket-l1.png)
 
 ## Step 10.1: Moving the Ticket Queue from L1 to L2
 * To escalate the ticket, we need to move it from the L1 queue to the L2 queue
@@ -618,12 +618,12 @@ auto reply: Auto Reply – Ticket Received
 * Select "L2 – Incident Responder" from the queue list
 * This action transfers the ticket to the L2 queue for further investigation
 
-<!-- Screenshot: Moving ticket to L2 queue using the Move/Queue dropdown -->
+![Moving ticket to L2 queue](https://app.devin.ai/attachments/b9d24ce2-588c-4d56-98e7-8b3005ffdab9/03-move-to-l2.png)
 
 * After moving the ticket, verify that it now appears under the L2 – Incident Responder queue
 * Navigate to Tickets → Queues → L2 – Incident Responder
 
-<!-- Screenshot: Ticket now visible in L2 queue -->
+![Ticket now visible in L2 queue](https://app.devin.ai/attachments/97d3db44-fef3-4ba7-8b25-5426b45cbbf5/04-ticket-in-l2.png)
 
 ## Step 10.2: Applying Template 2 – Investigation Ongoing on L2
 * Now that the ticket is in the L2 queue, the Incident Responder must apply the appropriate template
@@ -633,12 +633,12 @@ auto reply: Auto Reply – Ticket Received
 * The template content will auto-fill the response body
 * Click the Send Mail button
 
-<!-- Screenshot: Applying Template 2 on the escalated ticket in L2 -->
+![Applying Template 2 in L2](https://app.devin.ai/attachments/2cf12a14-a205-4a3c-b719-d7815c81ffee/05-apply-template2-l2.png)
 
 * After sending, the customer will receive a notification that their ticket has been escalated for further investigation
 * On the customer side, verify that the response from L2 is visible
 
-<!-- Screenshot: Customer side showing Template 2 response received -->
+![Customer side showing Template 2 response](https://app.devin.ai/attachments/f12dc5e0-f8ce-4404-a71b-76693ced9c07/06-customer-template2.png)
 
 <hr>
 
@@ -650,12 +650,12 @@ auto reply: Auto Reply – Ticket Received
 * Inside the ticket (currently in L2 queue), click the "Move" button or the Queue dropdown
 * Select "L3 – Threat Hunter / Forensics Expert" from the queue list
 
-<!-- Screenshot: Moving ticket from L2 to L3 queue -->
+![Moving ticket from L2 to L3 queue](https://app.devin.ai/attachments/73f988ef-6d8b-4819-854c-4db0c9c1254e/07-move-to-l3.png)
 
 * Verify that the ticket now appears under the L3 – Threat Hunter / Forensics Expert queue
 * Navigate to Tickets → Queues → L3 – Threat Hunter / Forensics Expert
 
-<!-- Screenshot: Ticket now visible in L3 queue -->
+![Ticket now visible in L3 queue](https://app.devin.ai/attachments/66c9ccd4-f582-4494-bb1e-a1051442f019/08-ticket-in-l3.png)
 
 ## Step 11.2: Applying Template 3 – Advanced Analysis / Resolution on L3
 * Click the ticket under the L3 queue
@@ -664,12 +664,12 @@ auto reply: Auto Reply – Ticket Received
 * The template content will auto-fill the response body
 * Click the Send Mail button
 
-<!-- Screenshot: Applying Template 3 on the escalated ticket in L3 -->
+![Applying Template 3 in L3](https://app.devin.ai/attachments/8174218f-d6f8-4794-8541-ae480f24a36d/09-apply-template3-l3.png)
 
 * After sending, the customer will receive a notification that their ticket is undergoing advanced analysis
 * On the customer side, verify that the response from L3 is visible
 
-<!-- Screenshot: Customer side showing Template 3 response received -->
+![Customer side showing Template 3 response](https://app.devin.ai/attachments/b59f366d-f321-4cdf-8140-87abb958b533/10-customer-template3.png)
 
 <hr>
 
@@ -702,7 +702,7 @@ SOC Management
 
 * Click Save
 
-<!-- Screenshot: Creating Template 4 in Admin Panel -->
+![Creating Template 4 in Admin Panel](https://app.devin.ai/attachments/c3eaf006-4a13-46fa-bf01-dbd77acf4745/11-create-template4.png)
 
 * Queue Assignment
 * Link this template to the following queue:
@@ -711,7 +711,7 @@ SOC Management
 * Do NOT assign this template to lower-tier queues
 * Then click Save and finish
 
-<!-- Screenshot: Linking Template 4 to L3 queue -->
+![Linking Template 4 to L3 queue](https://app.devin.ai/attachments/772b79a3-573e-467f-bd43-291b7f026d6b/12-link-template4-l3.png)
 
 
 ## Step 12.1: Creating Template 5 – Closure / Post-Incident Review
@@ -750,7 +750,7 @@ SOC Team
 
 * Click Save
 
-<!-- Screenshot: Creating Template 5 in Admin Panel -->
+![Creating Template 5 in Admin Panel](https://app.devin.ai/attachments/379cc576-62eb-44d0-9f83-7b94904de84a/13-create-template5.png)
 
 * Queue Assignment
 * Link this template to ALL queues:
@@ -760,11 +760,11 @@ SOC Team
 * This template is available at all levels because ticket closure may happen at any tier depending on the incident complexity
 * Then click Save and finish
 
-<!-- Screenshot: Linking Template 5 to all queues -->
+![Linking Template 5 to all queues](https://app.devin.ai/attachments/722632e8-83ba-4942-b16a-02776693d47f/14-link-template5-all.png)
 
 * Overview of all added templates (Templates 0–5)
 
-<!-- Screenshot: Full template overview showing all 6 templates -->
+![Template overview showing all 6 templates](https://app.devin.ai/attachments/b1467723-cfe0-4185-9243-257880b8a0a2/15-template-overview.png)
 
 <hr>
 
@@ -775,12 +775,12 @@ SOC Team
 * Select "Template 4 – Escalation to Management" from the template dropdown
 * Click the Send Mail button
 
-<!-- Screenshot: Applying Template 4 on the ticket -->
+![Applying Template 4 on the ticket](https://app.devin.ai/attachments/a8e817e9-a82e-4bbe-a3fe-3d1b52370ca4/16-apply-template4.png)
 
 * After sending, the customer will be notified that the incident has been escalated to SOC Management
 * On the customer side, verify the response
 
-<!-- Screenshot: Customer side showing Template 4 response -->
+![Customer side showing Template 4 response](https://app.devin.ai/attachments/0d8a7f6b-623e-43a4-8251-d1490e24e160/17-customer-template4.png)
 
 <hr>
 
@@ -794,7 +794,7 @@ SOC Team
 * Select "Template 5 – Closure / Post-Incident Review" from the template dropdown
 * Click the Send Mail button
 
-<!-- Screenshot: Applying Template 5 closure template -->
+![Applying Template 5 closure template](https://app.devin.ai/attachments/f28d1a36-0a0c-4dc2-9326-4f73a733289e/18-apply-template5.png)
 
 ## Step 14.2: Changing Ticket State to Closed
 * After sending the closure notification, we need to change the ticket state
@@ -803,15 +803,15 @@ SOC Team
 * * "closed successful" – if the incident was resolved successfully
 * * "closed unsuccessful" – if the incident could not be fully resolved
 
-<!-- Screenshot: Changing ticket state to closed successful -->
+![Changing ticket state to closed successful](https://app.devin.ai/attachments/bf674853-f917-4ebe-a608-a244f77d5521/19-close-ticket.png)
 
 * After closing the ticket, verify on both the Admin and Customer side
 
 * Admin Side – the ticket should show as "Closed" with the appropriate status
-<!-- Screenshot: Admin side showing closed ticket -->
+![Admin side showing closed ticket](https://app.devin.ai/attachments/67f5ce62-6b2a-4b48-857f-95522c774d98/20-admin-closed.png)
 
 * Customer Side – the customer should see the ticket marked as closed along with the closure message
-<!-- Screenshot: Customer side showing closed ticket with Template 5 response -->
+![Customer side showing closed ticket](https://app.devin.ai/attachments/3486cfd0-fb0c-4bb0-a852-d7c3f36a881b/21-customer-closed.png)
 
 <hr>
 
@@ -832,12 +832,12 @@ http://(IP Address of ELK-OTRS VM):8025
 * * Template 4 – Escalation to Management notification
 * * Template 5 – Closure / Post-Incident Review notification
 
-<!-- Screenshot: MailHog inbox showing all ticket notification emails -->
+![MailHog inbox showing all ticket notification emails](https://app.devin.ai/attachments/95ee1596-e102-416d-9699-8cbe89a8a9e4/22-mailhog-inbox.png)
 
 * Click on each email to verify the content matches the templates that were configured
 * This confirms that the email pipeline is working correctly from OTRS through MailHog
 
-<!-- Screenshot: MailHog showing email content of one of the templates -->
+![MailHog showing email content](https://app.devin.ai/attachments/1ba8fd6a-a46f-4e5f-b549-5625e5f8b564/23-mailhog-email.png)
 
 <hr>
 
@@ -845,7 +845,7 @@ http://(IP Address of ELK-OTRS VM):8025
 * Services define the type of IT or security service that the ticket is related to. Configuring services helps categorize tickets more precisely and ties into SLA management.
 * Navigate to Admin → Services → Add Service
 
-<!-- Screenshot: Admin panel navigating to Services -->
+![Admin panel navigating to Services](https://app.devin.ai/attachments/cff4905e-1e5f-4cd4-8875-bd39348e2e2c/24-admin-services.png)
 
 ## Step 16.1: Adding Service – Security Monitoring
 * Under Name, enter:
@@ -856,7 +856,7 @@ Security Monitoring
 * * valid
 * Click Save
 
-<!-- Screenshot: Adding Security Monitoring service -->
+![Adding Security Monitoring service](https://app.devin.ai/attachments/af79f977-af1f-45cb-aa4d-3792092ddf4a/25-add-service1.png)
 
 ## Step 16.2: Adding Service – Incident Response
 * Under Name, enter:
@@ -867,7 +867,7 @@ Incident Response
 * * valid
 * Click Save
 
-<!-- Screenshot: Adding Incident Response service -->
+![Adding Incident Response service](https://app.devin.ai/attachments/cf66a67c-9bb9-4c35-9c15-123865fc33fb/26-add-service2.png)
 
 ## Step 16.3: Adding Service – Threat Intelligence
 * Under Name, enter:
@@ -878,11 +878,11 @@ Threat Intelligence
 * * valid
 * Click Save
 
-<!-- Screenshot: Adding Threat Intelligence service -->
+![Adding Threat Intelligence service](https://app.devin.ai/attachments/b8dcdf32-36a0-4eed-9e9d-aa8d40fbc5ea/27-add-service3.png)
 
 * Overview of all added services
 
-<!-- Screenshot: Admin panel showing all 3 services configured -->
+![Admin panel showing all 3 services configured](https://app.devin.ai/attachments/963e49c7-21d4-4e22-a33b-c07beabcb2a8/28-services-overview.png)
 
 ## Step 16.4: Assigning Services to Customer Users
 * For customers to select a service when creating a ticket, the services must be linked to the customer user
@@ -894,11 +894,11 @@ Threat Intelligence
 ✔ Threat Intelligence
 * Click Save
 
-<!-- Screenshot: Linking services to customer user -->
+![Linking services to customer user](https://app.devin.ai/attachments/db6926b1-ae43-4a89-9311-bb9f18786ed5/29-link-services-customer.png)
 
 * Verify on the Customer Side that the services now appear when creating a new ticket
 
-<!-- Screenshot: Customer side showing available services in ticket creation -->
+![Customer side showing available services](https://app.devin.ai/attachments/ff41b9fd-6f44-4419-b418-95262df43ff8/30-customer-services.png)
 
 <hr>
 
@@ -906,7 +906,7 @@ Threat Intelligence
 * SLAs define the expected response and resolution times for each service. They ensure that tickets are handled within agreed-upon timeframes based on incident priority.
 * Navigate to Admin → Service Level Agreements → Add SLA
 
-<!-- Screenshot: Admin panel navigating to SLA management -->
+![Admin panel navigating to SLA management](https://app.devin.ai/attachments/1c872db2-63be-45f7-9daf-b0c3cf972a49/31-admin-sla-nav.png)
 
 ## Step 17.1: Adding SLA – Critical Incident SLA
 * Under Name, enter:
@@ -928,7 +928,7 @@ Critical Incident SLA
 * * valid
 * Click Save
 
-<!-- Screenshot: Creating Critical Incident SLA with escalation times -->
+![Creating Critical Incident SLA](https://app.devin.ai/attachments/9d7a02df-a3ae-48f1-8505-b720ae86e0aa/32-create-critical-sla.png)
 
 ## Step 17.2: Adding SLA – Standard Incident SLA
 * Under Name, enter:
@@ -950,15 +950,15 @@ Standard Incident SLA
 * * valid
 * Click Save
 
-<!-- Screenshot: Creating Standard Incident SLA with escalation times -->
+![Creating Standard Incident SLA](https://app.devin.ai/attachments/1a206919-cf2e-432d-a552-dd7592a31040/33-create-standard-sla.png)
 
 * Overview of all added SLAs
 
-<!-- Screenshot: Admin panel showing all configured SLAs -->
+![Admin panel showing all configured SLAs](https://app.devin.ai/attachments/4f437f9e-ea4b-4fd7-a98d-6999790b59fe/34-sla-overview.png)
 
 * Verify on the Customer Side that the SLA options now appear when creating a new ticket
 
-<!-- Screenshot: Customer side showing available SLAs in ticket creation -->
+![Customer side showing available SLAs](https://app.devin.ai/attachments/4dfec1cf-c43f-485d-a476-27584eecaf67/35-customer-sla.png)
 
 <hr>
 
@@ -992,7 +992,7 @@ Thank you.
 
 * Click Submit
 
-<!-- Screenshot: Creating fully configured ticket with all fields filled -->
+![Creating fully configured ticket](https://app.devin.ai/attachments/a3af9b98-9f97-480a-bc06-39c82831c3a7/36-create-full-ticket.png)
 
 ✅ Ticket will be created with full configuration
 
@@ -1004,10 +1004,10 @@ Thank you.
 
 * After submitting, verify the ticket on both sides:
 * Admin Side – ticket should show Type, Queue, Service, and SLA
-<!-- Screenshot: Admin side showing fully configured ticket with SLA timer -->
+![Admin side showing fully configured ticket with SLA timer](https://app.devin.ai/attachments/163c8725-5986-47ca-9aa1-98978cc97549/37-admin-full-ticket.png)
 
 * Customer Side – customer should see the ticket with auto reply
-<!-- Screenshot: Customer side showing the new ticket -->
+![Customer side showing the new ticket](https://app.devin.ai/attachments/932bb736-a2c1-4246-bd41-fcfa367dcc69/38-customer-full-ticket.png)
 
 <hr>
 
@@ -1022,14 +1022,14 @@ http://(IP Address of ELK-OTRS VM):5601
 * The credentials for Kibana are elastic:C1sc0123
 * Click Login
 
-<!-- Screenshot: Kibana login page -->
+![Kibana login page](https://app.devin.ai/attachments/4f782a0c-c5c6-441c-89db-81af49062dcf/39-kibana-login.png)
 
 ## Step 19.1: Navigating to Discover
 * After logging in, click the ☰ Hamburger icon on the top-left
 * Click "Discover" under the Analytics section
 * This view shows all ingested logs in real-time
 
-<!-- Screenshot: Kibana Discover page showing logs -->
+![Kibana Discover page showing logs](https://app.devin.ai/attachments/76fcbb86-24c1-4894-a1a8-6f0d7ac5db46/40-kibana-discover.png)
 
 ## Step 19.2: Filtering Logs
 * On the Discover page, we can filter logs to find specific security events
@@ -1041,7 +1041,7 @@ message: "authentication" OR message: "login" OR message: "failed"
 * You can also adjust the time range using the time picker on the top-right corner
 * Set it to "Last 15 minutes" or "Last 1 hour" depending on when the activity occurred
 
-<!-- Screenshot: Kibana showing filtered logs -->
+![Kibana showing filtered logs](https://app.devin.ai/attachments/08e6443d-e77d-4e62-8aa3-148d746ee8c9/41-kibana-filtered.png)
 
 ## Step 19.3: Understanding the Log Entries
 * Each log entry contains important information:
@@ -1056,7 +1056,7 @@ message: "authentication" OR message: "login" OR message: "failed"
 * * Investigate incidents with evidence
 * * Create reports for management
 
-<!-- Screenshot: Expanded log entry showing all fields -->
+![Expanded log entry showing all fields](https://app.devin.ai/attachments/91c341c1-31f6-4082-b20d-6109b38a2228/42-kibana-expanded.png)
 
 <hr>
 
