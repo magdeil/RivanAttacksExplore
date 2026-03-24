@@ -595,3 +595,581 @@ auto reply: Auto Reply – Ticket Received
 * Under Tickets -> click the given ticket and select template 1 - Initial Analysis
 * From there another TAB will automatically open and click the -> send mail button
 <img width="1416" height="795" alt="image" src="https://github.com/user-attachments/assets/3b0bbd15-bb40-47eb-a572-4d9c8c9c58d7" />
+
+* After sending the mail, the customer will receive the Template 1 – Initial Analysis response
+* On the customer side panel, click the ticket and verify that the response is received
+* The customer should see a message stating that the ticket is undergoing initial analysis and triage
+
+<!-- Screenshot: Customer side showing Template 1 response received -->
+
+
+# Step 10: Escalating Ticket from L1 to L2 – Incident Responder
+* After the L1 Analyst has completed the initial triage and determined that the ticket requires deeper investigation, the ticket must be escalated to the L2 queue.
+* This simulates a real-world SOC escalation where Tier 1 analysts pass complex incidents to Tier 2 Incident Responders.
+
+* On the Admin/Agent Panel (Index), open the ticket that was handled by L1
+* Click the ticket to view its details
+
+<!-- Screenshot: Opening the ticket from L1 queue -->
+
+## Step 10.1: Moving the Ticket Queue from L1 to L2
+* To escalate the ticket, we need to move it from the L1 queue to the L2 queue
+* Inside the ticket, click the "Move" button or the Queue dropdown
+* Select "L2 – Incident Responder" from the queue list
+* This action transfers the ticket to the L2 queue for further investigation
+
+<!-- Screenshot: Moving ticket to L2 queue using the Move/Queue dropdown -->
+
+* After moving the ticket, verify that it now appears under the L2 – Incident Responder queue
+* Navigate to Tickets → Queues → L2 – Incident Responder
+
+<!-- Screenshot: Ticket now visible in L2 queue -->
+
+## Step 10.2: Applying Template 2 – Investigation Ongoing on L2
+* Now that the ticket is in the L2 queue, the Incident Responder must apply the appropriate template
+* Click the ticket under the L2 queue
+* Click the Reply button
+* Select "Template 2 – Investigation Ongoing" from the template dropdown
+* The template content will auto-fill the response body
+* Click the Send Mail button
+
+<!-- Screenshot: Applying Template 2 on the escalated ticket in L2 -->
+
+* After sending, the customer will receive a notification that their ticket has been escalated for further investigation
+* On the customer side, verify that the response from L2 is visible
+
+<!-- Screenshot: Customer side showing Template 2 response received -->
+
+<hr>
+
+# Step 11: Escalating Ticket from L2 to L3 – Threat Hunter / Forensics Expert
+* If the L2 Incident Responder determines that the incident requires advanced threat hunting or forensic analysis, the ticket is escalated to L3.
+* This represents the highest level of technical escalation in the SOC workflow.
+
+## Step 11.1: Moving the Ticket Queue from L2 to L3
+* Inside the ticket (currently in L2 queue), click the "Move" button or the Queue dropdown
+* Select "L3 – Threat Hunter / Forensics Expert" from the queue list
+
+<!-- Screenshot: Moving ticket from L2 to L3 queue -->
+
+* Verify that the ticket now appears under the L3 – Threat Hunter / Forensics Expert queue
+* Navigate to Tickets → Queues → L3 – Threat Hunter / Forensics Expert
+
+<!-- Screenshot: Ticket now visible in L3 queue -->
+
+## Step 11.2: Applying Template 3 – Advanced Analysis / Resolution on L3
+* Click the ticket under the L3 queue
+* Click the Reply button
+* Select "Template 3 – Advanced Analysis / Resolution" from the template dropdown
+* The template content will auto-fill the response body
+* Click the Send Mail button
+
+<!-- Screenshot: Applying Template 3 on the escalated ticket in L3 -->
+
+* After sending, the customer will receive a notification that their ticket is undergoing advanced analysis
+* On the customer side, verify that the response from L3 is visible
+
+<!-- Screenshot: Customer side showing Template 3 response received -->
+
+<hr>
+
+# Step 12: Creating Template 4 – Escalation to Management
+* Template 4 is used when a security incident is severe enough to require management-level awareness and decision-making. This is typically triggered during high-impact incidents such as data breaches, ransomware attacks, or incidents affecting critical infrastructure.
+* Navigate to Admin → Template Management → Add Template
+
+* Under Type, select:
+* * Answer
+
+* Under Name, enter:
+* * Template 4 – Escalation to Management
+
+* In the Template Content field, enter the following message:
+```bash
+Hello,
+
+This is to inform you that your reported security incident has been escalated to the SOC Management team due to its severity and potential impact.
+
+Our leadership is now involved in coordinating the response and will ensure that all necessary actions are taken to contain and remediate the issue.
+
+You will receive further updates as the situation progresses.
+
+Thank you,
+SOC Management
+```
+
+* Set Validity to:
+* * valid
+
+* Click Save
+
+<!-- Screenshot: Creating Template 4 in Admin Panel -->
+
+* Queue Assignment
+* Link this template to the following queue:
+✔ L3 – Threat Hunter / Forensics Expert
+* This template is assigned to L3 because management escalation typically occurs at the highest technical tier
+* Do NOT assign this template to lower-tier queues
+* Then click Save and finish
+
+<!-- Screenshot: Linking Template 4 to L3 queue -->
+
+
+## Step 12.1: Creating Template 5 – Closure / Post-Incident Review
+* Template 5 is the final communication template used to formally close a ticket after the incident has been fully investigated, contained, and remediated. It informs the customer that the case is resolved and may reference a post-incident review.
+* Navigate to Admin → Template Management → Add Template
+
+* Under Type, select:
+* * Answer
+
+* Under Name, enter:
+* * Template 5 – Closure / Post-Incident Review
+
+* In the Template Content field, enter the following message:
+```bash
+Hello,
+
+We are pleased to inform you that your reported security incident has been fully investigated and resolved.
+
+Summary of Actions Taken:
+- The incident was analyzed and classified.
+- Containment and remediation actions were applied.
+- Relevant systems have been verified and restored to normal operation.
+
+A post-incident review will be conducted to improve our processes and prevent similar incidents in the future.
+
+If you have any further concerns, please do not hesitate to create a new ticket.
+
+Thank you for your patience and cooperation.
+
+Best regards,
+SOC Team
+```
+
+* Set Validity to:
+* * valid
+
+* Click Save
+
+<!-- Screenshot: Creating Template 5 in Admin Panel -->
+
+* Queue Assignment
+* Link this template to ALL queues:
+✔ L1 – Alert Analyst
+✔ L2 – Incident Responder
+✔ L3 – Threat Hunter / Forensics Expert
+* This template is available at all levels because ticket closure may happen at any tier depending on the incident complexity
+* Then click Save and finish
+
+<!-- Screenshot: Linking Template 5 to all queues -->
+
+* Overview of all added templates (Templates 0–5)
+
+<!-- Screenshot: Full template overview showing all 6 templates -->
+
+<hr>
+
+# Step 13: Applying Template 4 – Escalation to Management
+* If the situation requires management involvement, apply Template 4 while the ticket is still in L3
+* Click the ticket under the L3 queue
+* Click the Reply button
+* Select "Template 4 – Escalation to Management" from the template dropdown
+* Click the Send Mail button
+
+<!-- Screenshot: Applying Template 4 on the ticket -->
+
+* After sending, the customer will be notified that the incident has been escalated to SOC Management
+* On the customer side, verify the response
+
+<!-- Screenshot: Customer side showing Template 4 response -->
+
+<hr>
+
+# Step 14: Closing / Resolving the Ticket
+* After the incident has been fully handled and all necessary actions have been taken, the ticket must be formally closed
+* This step demonstrates the complete resolution workflow
+
+## Step 14.1: Applying Template 5 – Closure / Post-Incident Review
+* Click the ticket (in whichever queue it currently resides)
+* Click the Reply button
+* Select "Template 5 – Closure / Post-Incident Review" from the template dropdown
+* Click the Send Mail button
+
+<!-- Screenshot: Applying Template 5 closure template -->
+
+## Step 14.2: Changing Ticket State to Closed
+* After sending the closure notification, we need to change the ticket state
+* Inside the ticket, look for the "State" dropdown or click the "Close" action
+* Change the State to:
+* * "closed successful" – if the incident was resolved successfully
+* * "closed unsuccessful" – if the incident could not be fully resolved
+
+<!-- Screenshot: Changing ticket state to closed successful -->
+
+* After closing the ticket, verify on both the Admin and Customer side
+
+* Admin Side – the ticket should show as "Closed" with the appropriate status
+<!-- Screenshot: Admin side showing closed ticket -->
+
+* Customer Side – the customer should see the ticket marked as closed along with the closure message
+<!-- Screenshot: Customer side showing closed ticket with Template 5 response -->
+
+<hr>
+
+# Step 15: Verifying Email Notifications on MailHog
+* MailHog captures all outgoing emails from the OTRS system for testing purposes
+* This step verifies that all ticket-related email notifications were properly sent throughout the SOC workflow
+
+* On your browser, access MailHog using the IP address of the ELK-OTRS VM on port 8025:
+```bash
+http://(IP Address of ELK-OTRS VM):8025
+```
+
+* MailHog should display all the emails that were sent during the ticket lifecycle:
+* * Auto Reply (Template 0) – Acknowledgement of ticket creation
+* * Template 1 – Initial Analysis notification
+* * Template 2 – Investigation Ongoing notification (after L1 → L2 escalation)
+* * Template 3 – Advanced Analysis notification (after L2 → L3 escalation)
+* * Template 4 – Escalation to Management notification
+* * Template 5 – Closure / Post-Incident Review notification
+
+<!-- Screenshot: MailHog inbox showing all ticket notification emails -->
+
+* Click on each email to verify the content matches the templates that were configured
+* This confirms that the email pipeline is working correctly from OTRS through MailHog
+
+<!-- Screenshot: MailHog showing email content of one of the templates -->
+
+<hr>
+
+# Step 16: Adding and Configuring Services
+* Services define the type of IT or security service that the ticket is related to. Configuring services helps categorize tickets more precisely and ties into SLA management.
+* Navigate to Admin → Services → Add Service
+
+<!-- Screenshot: Admin panel navigating to Services -->
+
+## Step 16.1: Adding Service – Security Monitoring
+* Under Name, enter:
+```
+Security Monitoring
+```
+* Set Validity to:
+* * valid
+* Click Save
+
+<!-- Screenshot: Adding Security Monitoring service -->
+
+## Step 16.2: Adding Service – Incident Response
+* Under Name, enter:
+```
+Incident Response
+```
+* Set Validity to:
+* * valid
+* Click Save
+
+<!-- Screenshot: Adding Incident Response service -->
+
+## Step 16.3: Adding Service – Threat Intelligence
+* Under Name, enter:
+```
+Threat Intelligence
+```
+* Set Validity to:
+* * valid
+* Click Save
+
+<!-- Screenshot: Adding Threat Intelligence service -->
+
+* Overview of all added services
+
+<!-- Screenshot: Admin panel showing all 3 services configured -->
+
+## Step 16.4: Assigning Services to Customer Users
+* For customers to select a service when creating a ticket, the services must be linked to the customer user
+* Navigate to Admin → Customer Users ↔ Services
+* Select the customer user (e.g., user1)
+* Check all services that should be available:
+✔ Security Monitoring
+✔ Incident Response
+✔ Threat Intelligence
+* Click Save
+
+<!-- Screenshot: Linking services to customer user -->
+
+* Verify on the Customer Side that the services now appear when creating a new ticket
+
+<!-- Screenshot: Customer side showing available services in ticket creation -->
+
+<hr>
+
+# Step 17: Adding and Configuring Service Level Agreements (SLA)
+* SLAs define the expected response and resolution times for each service. They ensure that tickets are handled within agreed-upon timeframes based on incident priority.
+* Navigate to Admin → Service Level Agreements → Add SLA
+
+<!-- Screenshot: Admin panel navigating to SLA management -->
+
+## Step 17.1: Adding SLA – Critical Incident SLA
+* Under Name, enter:
+```
+Critical Incident SLA
+```
+
+* Under Service, select:
+* * Security Monitoring
+* * Incident Response
+* * Threat Intelligence
+
+* Configure Escalation Times:
+* * First Response Time: 10 minutes
+* * Update Time: 15 minutes
+* * Solution Time: 30 minutes
+
+* Set Validity to:
+* * valid
+* Click Save
+
+<!-- Screenshot: Creating Critical Incident SLA with escalation times -->
+
+## Step 17.2: Adding SLA – Standard Incident SLA
+* Under Name, enter:
+```
+Standard Incident SLA
+```
+
+* Under Service, select:
+* * Security Monitoring
+* * Incident Response
+* * Threat Intelligence
+
+* Configure Escalation Times:
+* * First Response Time: 30 minutes
+* * Update Time: 60 minutes
+* * Solution Time: 120 minutes
+
+* Set Validity to:
+* * valid
+* Click Save
+
+<!-- Screenshot: Creating Standard Incident SLA with escalation times -->
+
+* Overview of all added SLAs
+
+<!-- Screenshot: Admin panel showing all configured SLAs -->
+
+* Verify on the Customer Side that the SLA options now appear when creating a new ticket
+
+<!-- Screenshot: Customer side showing available SLAs in ticket creation -->
+
+<hr>
+
+# Step 18: Creating a Complete Ticket with Services and SLA
+* Now that all configurations are complete, we can create a fully configured ticket with all fields populated
+* On the Customer Panel, click "Create Ticket" or "New Ticket"
+
+* Fill in the following:
+* * Type: Phishing Email Reports
+* * To/Queue: L1 – Alert Analyst
+* * Service: Security Monitoring
+* * SLA: Critical Incident SLA
+
+* Subject:
+```
+Suspicious Link Detected – Possible Credential Harvesting
+```
+
+* Text:
+```bash
+Good day,
+
+I received an email from an unknown sender with a link that redirects to a login page mimicking our company portal.
+
+I did not click the link but I believe it is a phishing attempt targeting employee credentials.
+
+Please investigate immediately.
+
+Thank you.
+```
+
+* Click Submit
+
+<!-- Screenshot: Creating fully configured ticket with all fields filled -->
+
+✅ Ticket will be created with full configuration
+
+✅ Auto Reply should trigger automatically
+
+✅ Service and SLA are now linked to the ticket
+
+✅ Ticket should land in L1 – Alert Analyst with proper SLA timers
+
+* After submitting, verify the ticket on both sides:
+* Admin Side – ticket should show Type, Queue, Service, and SLA
+<!-- Screenshot: Admin side showing fully configured ticket with SLA timer -->
+
+* Customer Side – customer should see the ticket with auto reply
+<!-- Screenshot: Customer side showing the new ticket -->
+
+<hr>
+
+# Step 19: Monitoring Logs on ELK-Stack (Kibana)
+* The ELK-Stack (Elasticsearch, Logstash, Kibana) is used to monitor and analyze security logs in real-time. In a real-world SOC, this is where analysts observe incoming alerts and correlate events.
+
+* On your browser, access Kibana using the IP address of the ELK-OTRS VM on port 5601:
+```bash
+http://(IP Address of ELK-OTRS VM):5601
+```
+
+* The credentials for Kibana are elastic:C1sc0123
+* Click Login
+
+<!-- Screenshot: Kibana login page -->
+
+## Step 19.1: Navigating to Discover
+* After logging in, click the ☰ Hamburger icon on the top-left
+* Click "Discover" under the Analytics section
+* This view shows all ingested logs in real-time
+
+<!-- Screenshot: Kibana Discover page showing logs -->
+
+## Step 19.2: Filtering Logs
+* On the Discover page, we can filter logs to find specific security events
+* Use the search bar at the top to filter logs, for example:
+```bash
+message: "authentication" OR message: "login" OR message: "failed"
+```
+
+* You can also adjust the time range using the time picker on the top-right corner
+* Set it to "Last 15 minutes" or "Last 1 hour" depending on when the activity occurred
+
+<!-- Screenshot: Kibana showing filtered logs -->
+
+## Step 19.3: Understanding the Log Entries
+* Each log entry contains important information:
+* * @timestamp – when the event occurred
+* * message – the actual log content
+* * host.name – the system that generated the log
+* * log.file.path – the source file of the log
+
+* These logs help SOC analysts:
+* * Detect suspicious activities
+* * Correlate events across systems
+* * Investigate incidents with evidence
+* * Create reports for management
+
+<!-- Screenshot: Expanded log entry showing all fields -->
+
+<hr>
+
+# Step 20: Complete SOC Incident Response Workflow Summary
+* Below is a summary of the complete SOC-IR workflow that was demonstrated in this documentation:
+
+## Workflow Overview
+
+### 1. Ticket Creation (Service Desk)
+* Customer/User reports a security incident through the OTRS Customer Portal
+* Ticket is categorized by Type (e.g., Phishing, Malware, Suspicious Login)
+* Ticket is assigned to a Queue (L1 – Alert Analyst)
+* Service and SLA are selected
+
+### 2. Auto Acknowledgement (Template 0)
+* The system automatically sends an acknowledgement email to the customer
+* This confirms that the ticket has been received and is being reviewed
+
+### 3. Tier 1 – Alert Analyst (L1)
+* L1 Analyst performs initial triage and analysis
+* Template 1 – Initial Analysis is sent to the customer
+* If the incident requires deeper investigation → Escalate to L2
+
+### 4. Tier 2 – Incident Responder (L2)
+* L2 Analyst investigates the incident in detail
+* Template 2 – Investigation Ongoing is sent to the customer
+* Analyzes logs, systems, and artifacts
+* If the incident requires advanced forensics → Escalate to L3
+
+### 5. Tier 3 – Threat Hunter / Forensics Expert (L3)
+* L3 Expert performs advanced analysis, threat hunting, or forensic investigation
+* Template 3 – Advanced Analysis / Resolution is sent to the customer
+* If the incident is severe → Template 4 – Escalation to Management is sent
+
+### 6. Resolution and Closure
+* After the incident is fully handled:
+* * Template 5 – Closure / Post-Incident Review is sent
+* * Ticket state is changed to "closed successful"
+* * Post-incident review is scheduled
+
+### 7. Monitoring and Verification
+* MailHog verifies that all email notifications were properly sent
+* ELK-Stack (Kibana) monitors and displays security logs for analysis
+* SLA timers ensure tickets are handled within the agreed timeframes
+
+<hr>
+
+<div align="center">
+
+### Escalation Flow Diagram
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                        CUSTOMER / END USER                             │
+│                     (Reports Security Incident)                        │
+└───────────────────────────────┬─────────────────────────────────────────┘
+                                │
+                                ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│                     SERVICE DESK (Ticket Created)                      │
+│              ✉ Template 0 – Auto Reply sent to customer                │
+│              📋 Type, Queue, Service, SLA assigned                     │
+└───────────────────────────────┬─────────────────────────────────────────┘
+                                │
+                                ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│              L1 – ALERT ANALYST (Monitoring & Triage)                  │
+│              ✉ Template 1 – Initial Analysis                           │
+│              ⏱ First Response: 15 min | Solution: 60 min              │
+│                                                                         │
+│         ┌─── Resolved? ──► Close Ticket (Template 5)                   │
+│         │                                                               │
+│         └─── Needs Escalation? ──────────────┐                         │
+└──────────────────────────────────────────────┬──────────────────────────┘
+                                               │
+                                               ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│          L2 – INCIDENT RESPONDER (Investigation & Escalation)          │
+│          ✉ Template 2 – Investigation Ongoing                          │
+│          ⏱ First Response: 15 min | Solution: 60 min                  │
+│                                                                         │
+│         ┌─── Resolved? ──► Close Ticket (Template 5)                   │
+│         │                                                               │
+│         └─── Needs Escalation? ──────────────┐                         │
+└──────────────────────────────────────────────┬──────────────────────────┘
+                                               │
+                                               ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│       L3 – THREAT HUNTER / FORENSICS EXPERT (Advanced Analysis)        │
+│       ✉ Template 3 – Advanced Analysis / Resolution                    │
+│       ⏱ First Response: 15 min | Solution: 60 min                     │
+│                                                                         │
+│         ┌─── Severe? ──► Template 4 – Escalation to Management         │
+│         │                                                               │
+│         └─── Resolved ──► Close Ticket (Template 5)                    │
+└─────────────────────────────────────────────────────────────────────────┘
+                                │
+                                ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│                     TICKET CLOSED SUCCESSFULLY                         │
+│              ✉ Template 5 – Closure / Post-Incident Review             │
+│              📊 Post-Incident Review Scheduled                         │
+│              📧 All emails verified via MailHog                        │
+│              📈 Logs monitored via ELK-Stack (Kibana)                  │
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+</div>
+
+<hr>
+
+<div align="center">
+  <h2>End of SOC Incident Response Documentation</h2>
+  <p><strong>RIVAN CYBER TRAINING INSTITUTE</strong></p>
+  <p>This documentation covers the complete setup and workflow of a Security Operations Center (SOC) Incident Response system using OTRS (Znuny) Ticketing System, ELK-Stack (Kibana), and MailHog within a VMware lab environment.</p>
+</div>
